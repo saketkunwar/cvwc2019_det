@@ -32,10 +32,13 @@ Required for imagenet pretrained weights(i.e yolov3.weights and yolov3-tiny.weig
 
 
 To train  yolov3
+
 ./train_tiger
 
 To train yolov3 tiny
+
 ./train_tiger tiny
+
 ---------------------------------------------------------
 Conversion of model from pytorch to tensorflow
 please visit https://github.com/PINTO0309/OpenVINO-YoloV3  and follow the guidelines ,specifically convert_weights_pb.py.
