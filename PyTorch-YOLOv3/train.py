@@ -41,7 +41,7 @@ if __name__ == "__main__":
     parser.add_argument("--multiscale_training", default=True, help="allow for multi-scale training")
     opt = parser.parse_args()
     print(opt)
-
+    print ('is_tiny','tiny' in opt.pretrained_weights)
     #logger = Logger("logs")
 
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
@@ -107,7 +107,7 @@ if __name__ == "__main__":
 
             imgs = Variable(imgs.to(device))
             targets = Variable(targets.to(device), requires_grad=False)
-			
+            
             loss, outputs = model(imgs, targets)
             loss.backward()
 
@@ -181,4 +181,7 @@ if __name__ == "__main__":
             print(f"---- mAP {AP.mean()}")
 
         if epoch % opt.checkpoint_interval == 0:
-            torch.save(model.state_dict(), f"checkpoints/km_adam_yolov3_tinytiger_ckpt_%d.pth" % epoch)
+            if 'tiny' in opt.pretrained_weights:
+                torch.save(model.state_dict(), f"checkpoints/km_adam_yolov3_tinytiger_ckpt_%d.pth" % epoch)
+            else:
+                torch.save(model.state_dict(), f"checkpoints/n_yolov3_tiger_%d.pth" % epoch)
