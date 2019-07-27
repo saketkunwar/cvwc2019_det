@@ -1,0 +1,4 @@
+classes= 1
+train=data/tiger/train.txt
+valid=data/tiger/valid.txt
+names=data/tiger/classes.names
