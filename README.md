@@ -17,8 +17,8 @@ python3 openvino_yolov3_tiger_submit.py --model ../openvino_converted_model/n_yo
 ------------------------------------------------------------
 Inference pytorch usage
 
-./test_tiger.sh <test-dir> <result-filename>
-./test_tiger_tiny.sh <test-dir> <result-filename>
+./test_tiger.sh path-to_test-dir result-filename
+./test_tiger_tiny.sh path-to-test-dir result-filename
 
 -----------------------------------------------------------
 Train 
