@@ -18,6 +18,8 @@ python3 openvino_yolov3_tiger_submit.py --model ../openvino_converted_model/n_yo
 Inference pytorch usage
 
 ./test_tiger.sh path-to_test-dir result-filename
+
+
 ./test_tiger_tiny.sh path-to-test-dir result-filename
 
 -----------------------------------------------------------
@@ -41,6 +43,9 @@ Converion of model from tensorflow  to openvino
 Follow (https://docs.openvinotoolkit.org/latest/_docs_MO_DG_prepare_model_convert_model_Convert_Model_From_TensorFlow.html)
 
 
+Data:
+Train detection images needs to be downloaded from (https://cvwc2019.github.io/challenge.html) and stored in
+PyTorch-YOLOv3/data/tiger ( create images folder and store training images there). Orginal annotatino data in pascal-voc format was convereted and is already present in the repo.
 
 
 
