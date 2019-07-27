@@ -8,10 +8,10 @@ and setup environment paths for openvino
 
 cd OpenVINO-YoloV3/
 
-For yolov3 tiny
+For yolov3 tiny->
 python3 openvino_tiny-yolov3_tiger_submit.py --model ../openvino_converted_model/km_adam_yolov3_tinytiger_ckpt_9.xml --test_dir <dir-to-test> --result <result-file>
 
-For yolov3
+For yolov3->
 python3 openvino_yolov3_tiger_submit.py --model ../openvino_converted_model/n_yolov3_tiger_13.xml --test_dir <dir-to-test> --result <result-file>
 
 ------------------------------------------------------------
